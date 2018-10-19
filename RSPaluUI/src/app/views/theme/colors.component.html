@@ -1,0 +1,42 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-header row">
+      <div><p>List Data Pasien</p></div>
+      
+      <div><input type="text" placeholder="cari sesuatu?"></div>
+      
+    </div>
+    <div class="card-body">
+      <table class="table table-border">
+        <thead>
+          <tr style="color:lightblue">
+            <th>NoRM</th>
+            <th>Nama Pasien</th>
+            <th>Tanggal Lahir</th>
+            <th>Alamat</th>
+            <th>NO KTP</th>
+            <th>Jenis Kelamin</th>
+            <th>Telp/HP</th>
+            <th>Tgl Daftar</th>
+            <th>Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pasien of patients">
+            <td>{{pasien.id}}</td>
+            <td>{{pasien.name}}</td>
+            <td>{{pasien.tglLhr}}</td>
+            <td>{{pasien.alamat}}</td>
+            <td>{{pasien.ktp}}</td>
+            <td>{{pasien.jk}}</td>
+            <td>{{pasien.telp}}</td>
+            <td>{{pasien.tglDftr}}</td>
+            <td><button class="btn btn-sm btn-primary" (click)=edit(pasien.id)>edit</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card-footer"></div>
+  </div>
+
+</div>

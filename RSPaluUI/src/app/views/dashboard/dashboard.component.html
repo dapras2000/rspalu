@@ -1,0 +1,74 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-header" style="text-align:center"><strong class="text-align:center">Pendaftaran Pasien RS PALU</strong></div>
+    <div class="card-body">
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>No MR</p>
+        </div>
+        <div class="col-md-9">
+          <input class="form-control" type="text" style="width:100%" placeholder="-automatic-">
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>Poli / Dokter yang dituju</p>
+        </div>
+        <div class="col-md-9">
+          <select class="form-control" name="" id="" style="width:100%">
+            <option selected value="" disabled="true">--Select Region--</option>
+            <option *ngFor="let poli of poliklinik">
+              <a>{{poli.name}}</a>
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>Minta Rujukan</p>
+        </div>
+        <div class="col-md-9">
+          <input class="form-control" style="margin-left: 5px" class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>Tanggal Daftar</p>
+        </div>
+        <div class="col-md-9">
+          <input class="form-control" type="date" [ngModel]="dt | date:'yyyy-MM-dd'" (ngModelChange)="dt = $event">
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>Cara Bayar</p>
+        </div>
+        <div style="margin-left: 15px" class="form-check form-check-inline" *ngFor="let bayar of pembayaran">
+          <input class="form-check-input" type="radio" name="bayar.id" id="inlineRadio1" value="bayar.id">
+          <label class="form-check-label" for="bayar.id">{{bayar.name}}</label>
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>Asal Pasien</p>
+        </div>
+        <div style="margin-left: 15px" class="form-check form-check-inline" *ngFor="let asal of asalPasien">
+          <input class="form-check-input" type="radio" name="asal.id" id="inlineRadio1" value="asal.id">
+          <label class="form-check-label" for="asal.id">{{asal.name}}</label>
+        </div>
+      </div>
+
+      <div style="margin-left:15px" class="form-group" class="row">
+        <button class="btn btn-sm btn-primary" style="margin:5px" (click)="baru()">Pasien Baru</button>
+        <button class="btn btn-sm btn-primary" style="margin:5px" (click)="lama()">Pasien Lama</button>
+      </div>
+    </div>
+    <div class="card-footer"></div>
+  </div>
+</div>

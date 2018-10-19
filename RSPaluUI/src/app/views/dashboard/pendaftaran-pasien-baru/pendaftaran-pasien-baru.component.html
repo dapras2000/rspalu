@@ -1,0 +1,131 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-header"><strong>Pendaftaran Pasien Baru</strong></div>
+    <div class="card-body">
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>Nama Lengkap Pasien</p>
+        </div>
+        <div class="col-md-9">
+          <input class="form-control" type="text" style="width:100%" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>Tempat Lahir</p>
+        </div>
+        <div class="col-md-9">
+          <input class="form-control" type="text" style="width:100%" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>Tanggal Lahir</p>
+        </div>
+        <div class="col-md-9">
+          <input class="form-control" type="date" [ngModel]="dt | date:'yyyy-MM-dd'" (ngModelChange)="dt = $event">
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>No KTP</p>
+        </div>
+        <div class="col-md-9">
+          <input class="form-control" type="number" style="width:100%" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>Alamat KTP</p>
+        </div>
+        <div class="col-md-9">
+          <input class="form-control" type="text" style="width:100%" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>No Telepon / HP</p>
+        </div>
+        <div class="col-md-9">
+          <input class="form-control" type="text" style="width:100%" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>Nama Penanggung Jawab</p>
+        </div>
+        <div class="col-md-9">
+          <input class="form-control" type="text" style="width:100%" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>Hubungan Dengan Pasien</p>
+        </div>
+        <div class="col-md-9">
+          <input class="form-control" type="text" style="width:100%" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>Alamat Penanggung Jawab*</p>
+        </div>
+        <div class="col-md-9">
+          <input class="form-control" type="text" style="width:100%" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>No Telepon / HP</p>
+        </div>
+        <div class="col-md-9">
+          <input class="form-control" type="text" style="width:100%" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>Jenis Kelamin</p>
+        </div>
+        <div style="margin-left: 15px" class="form-check form-check-inline" *ngFor="let jk of jenisKelamin">
+          <input class="form-check-input" type="radio" name="jk" id="inlineRadio1" value="jk">
+          <label class="form-check-label" for="jk">{{jk.name}}</label>
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>Status Perkawinan</p>
+        </div>
+        <div style="margin-left: 15px" class="form-check form-check-inline" *ngFor="let status of statusPerkawinan">
+          <input class="form-check-input" type="radio" name="status" id="inlineRadio1" value="status">
+          <label class="form-check-label" for="status">{{status.name}}</label>
+        </div>
+      </div>
+
+      <div class="form-group" class="col-md-6 row">
+        <div class="col-md-3">
+          <p>Agama</p>
+        </div>
+        <div style="margin-left: 15px" class="form-check form-check-inline" *ngFor="let agama of Religions">
+          <input class="form-check-input" type="radio" name="agama" id="inlineRadio1" value="agama">
+          <label class="form-check-label" for="agama">{{agama.name}}</label>
+        </div>
+      </div>
+
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary btn-sm" (click)="back()">Back</button>
+    </div>
+  </div>
+</div>
