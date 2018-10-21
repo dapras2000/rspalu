@@ -18,7 +18,7 @@
             <th>Jenis Kelamin</th>
             <th>Telp/HP</th>
             <th>Tgl Daftar</th>
-            <th>Edit</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -31,7 +31,9 @@
             <td>{{pasien.jk}}</td>
             <td>{{pasien.telp}}</td>
             <td>{{pasien.tglDftr}}</td>
-            <td><button class="btn btn-sm btn-primary" (click)=edit(pasien.id)>edit</button></td>
+            <td><button class="btn btn-sm btn-primary" (click)=edit(pasien.id)>edit</button>
+              <button class="btn btn-sm btn-primary" (click)=edit(pasien.id)>detial</button>
+            </td>
           </tr>
         </tbody>
       </table>

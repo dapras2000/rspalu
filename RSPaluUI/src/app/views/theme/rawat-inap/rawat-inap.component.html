@@ -1,0 +1,62 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-header">Rawat Inap</div>
+    <div class="card-body">
+      <table class="table" style="width:100%;border-top: none">
+        <tbody>
+          <tr>
+            <td>No MR</td>
+            <td>{{pasien.id}}</td>
+            <td class="pull-right">
+              <button>List Pembayaran</button>
+              <button>Jasa dan Tindakan Rumah Sakit</button>
+              <button>Konsultasi Gizi</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Nama Lengkap pasien</td>
+            <td>{{pasien.name}}</td>
+          </tr>
+          <tr>
+            <td>Alamat Pasien</td>
+            <td>{{pasien.alamat}}</td>
+          </tr>
+          <tr>
+            <td>Jenis Kelamin</td>
+            <td>L/P</td>
+          </tr>
+          <tr>
+            <td>Tanggal Lahir</td>
+            <td>{{pasien.tglMasuk}}</td>
+          </tr>
+          <tr>
+            <td>Umur</td>
+            <td>{{pasien.id}}</td>
+          </tr>
+          <tr>
+            <td>Cara Bayar</td>
+            <td>{{pasien.jenisPembayaran}}</td>
+          </tr>
+          <tr>
+            <td>Dokter Pengirim</td>
+            <td>{{pasien.admin}}</td>
+          </tr>
+          <tr>
+            <td>Nama Ruang</td>
+            <td>{{pasien.namaRuang}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header">Aksi Perawatan</div>
+    <div class="card-body">
+        <div style="margin-left: 15px" class="form-check form-check-inline" *ngFor="let aksi of formRawatInap">
+            <input class="form-check-input" type="radio" name="aksi" id="inlineRadio1" value="agama">
+            <label class="form-check-label" for="aksi">{{aksi.name}}</label>
+          </div>
+    </div>
+    <div class="card-footer"><button class="btn btn-sm btn-success text-center" (click)="submit(pasien.id)">Pilih</button></div>
+  </div>
+</div>

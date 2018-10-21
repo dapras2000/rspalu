@@ -13,6 +13,13 @@ export class CarouselsComponent {
   activeSlideIndex: number = 0;
   noWrapSlides: boolean = false;
 
+  dataPenyakit:any = [
+    {id:1,name:'Abdominal Aortic Aneurysm',local:'',DTD:6,sbbLocal:'Bacteria'},
+    {id:2,name:'Acanthamoeba Infection',local:'',DTD:4,sbbLocal:'Virus'},
+    {id:3,name:'ACE (Adverse Childhood Experiences)',local:'',DTD:5,sbbLocal:'Sosial'},
+    {id:3,name:'Acinetobacter Infection',local:'',DTD:8,sbbLocal:'Virus'}
+  ]
+
   constructor() {
     for (let i = 0; i < 4; i++) {
       this.addSlide();

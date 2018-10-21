@@ -10,6 +10,7 @@ import { ThemeRoutingModule } from './theme-routing.module';
 import { FormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { RawatInapComponent } from './rawat-inap/rawat-inap.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
   ],
   declarations: [
     ColorsComponent,
-    TypographyComponent
+    TypographyComponent,
+    RawatInapComponent
   ]
 })
 export class ThemeModule { }

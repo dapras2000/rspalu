@@ -1,3 +1,4 @@
+import { RawatInapComponent } from './rawat-inap/rawat-inap.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -24,7 +25,14 @@ const routes: Routes = [
         data: {
           title: 'Typography'
         }
-      }
+      },
+      {
+        path: 'rawat-inap/:id',
+        component: RawatInapComponent,
+        data: {
+          title: 'Rawat Inap'
+        }
+      },
     ]
   }
 ];
